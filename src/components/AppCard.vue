@@ -22,14 +22,18 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="col-xxl-3 col-xl-4 col-sm-6">
     <div class="card">
-      <img :src="appDetails.iconURL" class="card-img-top" alt="">
-      <div class="card-body">
-        <h5 class="card-title">{{ appDetails.name }}</h5>
-        <p class="card-text">
-          {{ appDetails.packageId }}
-        </p>
+      <div class="card-body d-flex justify-content-between">
+        <div>
+          <h5 class="card-title">{{ appDetails.name }}</h5>
+          <p class="card-text">
+            {{ appDetails.packageId }}
+          </p>
+        </div>
+        <div>
+          <img :src="appDetails.iconURL" class="img-fluid" :alt="appDetails.name">
+        </div>
       </div>
       <ul class="list-group list-group-flush">
         <li v-if="noChecks" class="list-group-item bg-success-subtle d-flex align-items-center">
@@ -52,13 +56,13 @@ onMounted(async () => {
         </li>
         <li v-if="appDetails.strongIntegrity" class="list-group-item bg-danger-subtle d-flex align-items-center">
           <span class="material-symbols-outlined me-2">
-            error
+            dangerous
           </span>
           Strong integrity
         </li>
         <li v-if="appDetails.bootloaderCheck" class="list-group-item bg-danger-subtle d-flex align-items-center">
           <span class="material-symbols-outlined me-2">
-            error
+            dangerous
           </span>
           Bootloader Check
         </li>
@@ -66,3 +70,34 @@ onMounted(async () => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.img-fluid {
+  max-width: 100px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .img-fluid {
+    max-width: 90px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .img-fluid {
+    max-width: 80px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .img-fluid {
+    max-width: 70px;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .img-fluid {
+    max-width: 60px;
+  }
+}
+</style>
