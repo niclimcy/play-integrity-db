@@ -23,7 +23,6 @@ onMounted(async () => {
 watch(() => props.query, (query) => {
   const results = trie.get(query)
   packageIds.value = (results as { id: string }[]).map(app => app.id)
-  console.log(packageIds.value)
 })
 </script>
 
