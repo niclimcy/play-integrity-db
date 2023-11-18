@@ -12,7 +12,10 @@ const handleQuery = (value: string) => {
 
 <template>
   <div class="container mb-4">
-    <h1 class="mt-4 text-center display-4">Play Integrity DB</h1>
+    <div class="mt-4 text-center">
+      <img src="/favicon/favicon.svg" class="img" alt="Play Integrity DB" style="width: 4rem">
+      <h1 class="display-4">Play Integrity DB</h1>
+    </div>
     <SearchBar class="mt-4" @query="handleQuery" />
     <AppList class="mt-4" :query="query" />
   </div>
