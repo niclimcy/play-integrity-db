@@ -18,13 +18,16 @@ const handleQuery = (value: string) => {
     </div>
     <SearchBar class="mt-4" @query="handleQuery" />
     <AppList class="mt-4" :query="query" />
+    <div v-if="query" class="alert alert-info alert-dismissible fade show mt-4" role="alert">
+      <h4 class="alert-heading d-flex align-items-center">
+        <span class="material-symbols-outlined me-2">info</span>
+        Don't see your app?
+      </h4>
+      <hr>
+      <p class="mb-0">Contribute to our GitHub 
+        <a href="https://github.com/niclimcy/play-integrity-db" class="alert-link">here</a>!
+      </p>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
   </div>
 </template>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-  h1 {
-    font-family: 'Noto Sans', sans-serif;
-  }
-</style>

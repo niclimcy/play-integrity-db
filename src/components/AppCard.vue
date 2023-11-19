@@ -37,33 +37,23 @@ onMounted(async () => {
       </div>
       <ul class="list-group list-group-flush">
         <li v-if="noChecks" class="list-group-item bg-success-subtle d-flex align-items-center">
-          <span class="material-symbols-outlined me-2">
-            check_circle
-          </span>
+          <span class="material-symbols-outlined me-2">check_circle</span>
           No checks
         </li>
         <li v-if="appDetails.rootCheck" class="list-group-item bg-primary-subtle d-flex align-items-center">
-          <span class="material-symbols-outlined me-2">
-            info
-          </span>
+          <span class="material-symbols-outlined me-2">info</span>
           Root Check
         </li>
         <li v-if="appDetails.deviceIntegrity" class="list-group-item bg-warning-subtle d-flex align-items-center">
-          <span class="material-symbols-outlined me-2">
-            warning
-          </span>
+          <span class="material-symbols-outlined me-2">warning</span>
           Device integrity
         </li>
         <li v-if="appDetails.strongIntegrity" class="list-group-item bg-danger-subtle d-flex align-items-center">
-          <span class="material-symbols-outlined me-2">
-            dangerous
-          </span>
+          <span class="material-symbols-outlined me-2">dangerous</span>
           Strong integrity
         </li>
         <li v-if="appDetails.bootloaderCheck" class="list-group-item bg-danger-subtle d-flex align-items-center">
-          <span class="material-symbols-outlined me-2">
-            dangerous
-          </span>
+          <span class="material-symbols-outlined me-2">dangerous</span>
           Bootloader Check
         </li>
       </ul>
