@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'material-symbols/outlined.css'
 import './assets/css/main.css'
 import App from './App.vue'
 
