@@ -1,0 +1,9 @@
+{
+  "packageId": "net.one97.paytm",
+  "name": "Paytm",
+  "iconURL": "https://play-lh.googleusercontent.com/6_Qan3RBgpJUj0C2ct4l0rKKVdiJgF6vy0ctfWyQ7aN0lBjs78M-1cQUONQSVeo2jfs",
+  "deviceIntegrity": true,
+  "strongIntegrity": false,
+  "rootCheck": true,
+  "bootloaderCheck": true
+}

@@ -1,0 +1,9 @@
+{
+  "packageId": "com.fedmobile",
+  "name": "FedMobile",
+  "iconURL": "https://play-lh.googleusercontent.com/RTmfgCmNOoh97mbifT3s14MusUVdLFBb0_0Kge85MPob0cmhyiikN_thf2FnGSOb4X8-",
+  "deviceIntegrity": true,
+  "strongIntegrity": false,
+  "rootCheck": true,
+  "bootloaderCheck": false
+}
