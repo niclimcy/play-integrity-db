@@ -12,10 +12,12 @@ onMounted(async () => {
   const response = await fetch(`/data/${props.appId}`)
   appDetails.value = await response.json()
 
-  if (!appDetails.value.deviceIntegrity &&
+  if (
+    !appDetails.value.deviceIntegrity &&
     !appDetails.value.strongIntegrity &&
     !appDetails.value.rootCheck &&
-    !appDetails.value.bootloaderCheck) {
+    !appDetails.value.bootloaderCheck
+  ) {
     noChecks.value = true
   }
 })
@@ -32,7 +34,7 @@ onMounted(async () => {
           </p>
         </div>
         <div>
-          <img :src="appDetails.iconURL" class="img-fluid" :alt="appDetails.name">
+          <img :src="appDetails.iconURL" class="img-fluid" :alt="appDetails.name" />
         </div>
       </div>
       <ul class="list-group list-group-flush">
@@ -40,19 +42,31 @@ onMounted(async () => {
           <span class="material-symbols-outlined me-2">check_circle</span>
           No checks
         </li>
-        <li v-if="appDetails.rootCheck" class="list-group-item bg-primary-subtle d-flex align-items-center">
+        <li
+          v-if="appDetails.rootCheck"
+          class="list-group-item bg-primary-subtle d-flex align-items-center"
+        >
           <span class="material-symbols-outlined me-2">info</span>
           Root Check
         </li>
-        <li v-if="appDetails.deviceIntegrity" class="list-group-item bg-warning-subtle d-flex align-items-center">
+        <li
+          v-if="appDetails.deviceIntegrity"
+          class="list-group-item bg-warning-subtle d-flex align-items-center"
+        >
           <span class="material-symbols-outlined me-2">warning</span>
           Device integrity
         </li>
-        <li v-if="appDetails.strongIntegrity" class="list-group-item bg-danger-subtle d-flex align-items-center">
+        <li
+          v-if="appDetails.strongIntegrity"
+          class="list-group-item bg-danger-subtle d-flex align-items-center"
+        >
           <span class="material-symbols-outlined me-2">dangerous</span>
           Strong integrity
         </li>
-        <li v-if="appDetails.bootloaderCheck" class="list-group-item bg-danger-subtle d-flex align-items-center">
+        <li
+          v-if="appDetails.bootloaderCheck"
+          class="list-group-item bg-danger-subtle d-flex align-items-center"
+        >
           <span class="material-symbols-outlined me-2">dangerous</span>
           Bootloader Check
         </li>
@@ -83,7 +97,6 @@ onMounted(async () => {
     max-width: 70px;
   }
 }
-
 
 @media (max-width: 575px) {
   .img-fluid {

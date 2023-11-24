@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import AppList from './components/AppList.vue';
+import { ref } from 'vue'
+import AppList from './components/AppList.vue'
 import SearchBar from './components/SearchBar.vue'
 
 const query = ref('')
@@ -13,7 +13,7 @@ const handleQuery = (value: string) => {
 <template>
   <div class="container mb-4">
     <div class="mt-4 text-center">
-      <img src="/favicon/favicon.svg" class="img" alt="Play Integrity DB" style="width: 4rem">
+      <img src="/favicon/favicon.svg" class="img" alt="Play Integrity DB" style="width: 4rem" />
       <h1 class="display-4">Play Integrity DB</h1>
     </div>
     <SearchBar class="mt-4 g-2" @query="handleQuery" />
@@ -23,8 +23,9 @@ const handleQuery = (value: string) => {
         <span class="material-symbols-outlined me-2">info</span>
         Don't see your app?
       </h4>
-      <hr>
-      <p class="mb-0">Contribute to our GitHub
+      <hr />
+      <p class="mb-0">
+        Contribute to our GitHub
         <a href="https://github.com/niclimcy/play-integrity-db" class="alert-link">here</a>!
       </p>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

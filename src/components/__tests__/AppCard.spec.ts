@@ -22,12 +22,14 @@ global.fetch = vi.fn(() =>
 ) as unknown as typeof fetch
 
 afterEach(() => {
-  vi.restoreAllMocks();
+  vi.restoreAllMocks()
 })
 
 describe('AppCard', () => {
   it('renders properly with props and fetched data', async () => {
-    const wrapper = mount(AppCard, { props: { appId: 'com.mcdonalds.app' } }) as VueWrapper<any>
+    const wrapper = mount(AppCard, {
+      props: { appId: 'com.mcdonalds.app' }
+    }) as VueWrapper<any>
     await flushPromises()
 
     expect(wrapper.text()).toContain("McDonald's")
@@ -36,7 +38,9 @@ describe('AppCard', () => {
   })
 
   it('updates state correctly based on API response', async () => {
-    const wrapper = mount(AppCard, { props: { appId: 'com.mcdonalds.app' } }) as VueWrapper<any>
+    const wrapper = mount(AppCard, {
+      props: { appId: 'com.mcdonalds.app' }
+    }) as VueWrapper<any>
     await flushPromises()
 
     expect(fetch).toHaveBeenCalledWith('/data/com.mcdonalds.app')
