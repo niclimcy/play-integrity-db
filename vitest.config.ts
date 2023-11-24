@@ -7,7 +7,11 @@ export default mergeConfig(
     test: {
       environment: 'jsdom',
       exclude: [...configDefaults.exclude, 'e2e/*'],
-      root: './src'
+      root: './',
+      coverage: {
+        provider: 'v8',
+        reporter: ['text', 'json-summary', 'json']
+      }
     }
   })
 )
